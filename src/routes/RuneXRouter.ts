@@ -2,7 +2,7 @@ import express from "express";
 import {
   walletConnect,
   writeHistory,
-} from "../controller/raffleController";
+} from "../controller/Controller";
 
 const router = express.Router();
 
