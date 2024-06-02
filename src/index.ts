@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
 import cron from "node-cron";
-import historyRoutes from "./routes/historyRouter";
+import runeXRoutes from "./routes/RuneXRouter";
 
 dotenv.config();
 
@@ -37,4 +37,4 @@ app.get("/", (req: Request, res: Response) => {
   res.send("<h3>Raffle API is up and running.</h3>");
 });
 
-app.use("/api", historyRoutes);
+app.use("/api", runeXRoutes);
