@@ -4,11 +4,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
 import cron from "node-cron";
-import raffleRoutes from "./routes/raffleRoutes";
-import {
-  chooseRaffleWinner,
-  checkTxStatus,
-} from "./controller/raffleController";
+import historyRoutes from "./routes/historyRouter";
 
 dotenv.config();
 
@@ -41,10 +37,4 @@ app.get("/", (req: Request, res: Response) => {
   res.send("<h3>Raffle API is up and running.</h3>");
 });
 
-app.use("/api/raffle", raffleRoutes);
-
-cron.schedule("*/1 * * * *", () => {
-  console.log("Update Raffles Every 1 mins");
-  chooseRaffleWinner();
-  checkTxStatus();
-});
+app.use("/api", historyRoutes);
