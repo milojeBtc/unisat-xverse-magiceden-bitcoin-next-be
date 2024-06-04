@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
-import cron from "node-cron";
 import runeXRoutes from "./routes/RuneXRouter";
 
 dotenv.config();
