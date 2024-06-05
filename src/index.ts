@@ -8,7 +8,7 @@ import runeXRoutes from "./routes/RuneXRouter";
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 9000;
 
 app.use(
   cors({
